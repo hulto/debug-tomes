@@ -1,0 +1,12 @@
+time.sleep(30)
+def main():
+    assets.copy('sleep_test/assets/bash', '/tmp/bash-test')
+    if not file.exists('/tmp/bash-test'):
+        eprint("Asset copy failed")
+        return
+    if "bc5945feb8bd26203ebfafea5ce1878bb2e32cb8fb50ab7ae395cfb1e1aaaef1" != crypto.hash_file("/tmp/bash-test", "sha256"):
+        eprint("Asset hash mismatch")
+        return
+    print("Ok!")
+
+main()
