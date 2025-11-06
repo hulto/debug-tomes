@@ -1,6 +1,5 @@
-time.sleep(30)
 def main():
-    assets.copy('sleep_test/assets/bash', '/tmp/bash-test')
+    assets.copy('debug_test/assets/bash', '/tmp/bash-test')
     if not file.exists('/tmp/bash-test'):
         eprint("Asset copy failed")
         return
