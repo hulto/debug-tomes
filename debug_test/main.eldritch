@@ -1,9 +1,9 @@
 def main():
-    assets.copy('debug_test/assets/bash', '/tmp/bash-test')
+    assets.copy('debug_test/assets/rand.bin', '/tmp/bash-test')
     if not file.exists('/tmp/bash-test'):
         eprint("Asset copy failed")
         return
-    if "bc5945feb8bd26203ebfafea5ce1878bb2e32cb8fb50ab7ae395cfb1e1aaaef1" != crypto.hash_file("/tmp/bash-test", "sha256"):
+    if "408b1d539065555cdea660a3d5a11b60701ebd2e59e0a07f9f884c7492ad4891" != crypto.hash_file("/tmp/bash-test", "sha256"):
         eprint("Asset hash mismatch")
         return
     print("Ok!")
