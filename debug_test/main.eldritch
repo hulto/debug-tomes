@@ -8,4 +8,5 @@ def main():
         return
     print("Ok!")
 
+pprint(sys.get_ip())
 main()
